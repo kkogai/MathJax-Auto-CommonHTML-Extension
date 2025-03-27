@@ -3,18 +3,29 @@
   "name": "MathJax Auto CommonHTML Renderer",
   "version": "1.0",
   "description": "MathJaxが検出されたページで自動的にレンダラーをCommonHTMLに変更します",
-  "permissions": ["scripting", "activeTab"],
+  "permissions": [
+    "scripting",
+    "activeTab"
+  ],
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"],
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
       "run_at": "document_idle"
     }
   ],
   "web_accessible_resources": [
     {
-      "resources": ["injector.js"],
-      "matches": ["<all_urls>"]
+      "resources": [
+        "injector.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
     }
   ]
 }

@@ -1,10 +1,10 @@
-(function() {
+(function () {
   console.log("MathJaxレンダラー自動変更スクリプトが実行されました");
-  
+
   try {
     if (typeof MathJax !== 'undefined') {
       console.log("MathJaxオブジェクトにアクセスできました");
-      
+
       if (MathJax.Hub) {
         // MathJax v2
         MathJax.Hub.Queue(["setRenderer", MathJax.Hub, "CommonHTML"]);
@@ -21,7 +21,7 @@
     } else {
       console.log("このページのコンテキストではMathJaxが見つかりません");
     }
-  } catch(e) {
+  } catch (e) {
     console.error("MathJax操作エラー:", e);
   }
 })();
